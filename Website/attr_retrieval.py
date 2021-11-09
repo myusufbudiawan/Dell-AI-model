@@ -32,12 +32,12 @@ def dataset_size():
 
 
 def is_supervise():
-    supervised = True
+    supervised = 'TRUE'
 
     for col in df.columns:
         for character in col:
             if character.isdigit():
-                supervised = False
+                supervised = 'FALSE'
 
     return supervised
 
@@ -64,7 +64,7 @@ def is_binary():
 
 
 def det_goal():
-    if (is_boolean() == True):
+    if (is_binary() == True):
         goal = 'classification'
     else:
         goal = 'regression'

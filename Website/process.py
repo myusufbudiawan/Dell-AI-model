@@ -1,12 +1,6 @@
 # file for the model
 
 import pandas as pd
-from keras.models import Sequential, load_model
-from keras.layers import *
-from pandas.core.algorithms import unique
-from pandas.core.indexes.base import Index
-from sklearn.preprocessing import MinMaxScaler
-import tensorflow as tf
 
 # this is sequential model
 
@@ -28,11 +22,14 @@ import tensorflow as tf
 
 # Decision tree model
 
-header = ["type_data", "goal", "model"]
+header = ["binary_type", "data_type", "ds_size", "is_supervised"]
 
 
-def process_data():
-    data = pd.read_csv('model_training_data.csv', encoding='latin-1')
+def process_data(predict_df):
+
+    outcome_string = ""
+
+    data = pd.read_csv('data_training_model_final.csv', encoding='latin-1')
 
     data_array = data.to_numpy()
 
@@ -52,12 +49,20 @@ def process_data():
     my_tree = build_tree(data_array)
 
     testing_data = [
-        ['TRUE', 'Classification', 'Small', 'dog'],
+        ['TRUE', 'Classification', 'Small', 'null']
     ]
 
-    for row in testing_data:
-        print("Actual: %s. Predicted: %s" %
-              (row[-1], print_leaf(classify(row, my_tree))))
+    # attributes parsed from the dataset
+    print(header)
+    print("attributes of the data set are:", predict_df)
+
+    for row in predict_df:
+        # print("Actual: %s. Predicted: %s" % (
+        #     row[-1], print_leaf(classify(row, my_tree)))
+        # )
+        outcome_string = "%s" % (print_leaf(classify(row, my_tree)))
+
+    return outcome_string
 
 # TODO
 # print leaf--expected outcome of the model

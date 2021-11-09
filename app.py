@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, render_template, request, jsonify
 from flask_dropzone import Dropzone
+from pandas.core.frame import DataFrame
 import requests
 import pandas as pd
 
@@ -9,6 +10,7 @@ import pandas as pd
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 dataset_path = ""
+result = "null"
 
 app = Flask(__name__)
 
@@ -24,7 +26,6 @@ app.config.update(
     DROPZONE_ALLOWED_FILE_TYPE='.csv'
 )
 
-
 dropzone = Dropzone(app)
 
 
@@ -36,7 +37,7 @@ def upload():
 
         f.save(file_path)
 
-        data = pd.read_csv(file_path, encoding='latin-1')
+        data = pd.read_csv(file_path)
 
         data.to_csv(target_csv_path, index=False)
 
@@ -45,19 +46,23 @@ def upload():
     return render_template('index.html')
 
 
-@app.route('/finish')
+@app.route('/result')
 def process():
 
     from Website import process, attr_retrieval
 
-    print(attr_retrieval.dataset_size())
-    print(attr_retrieval.is_supervise())
-    print(attr_retrieval.is_binary())
-    print(attr_retrieval.det_goal())
+    ds_size = attr_retrieval.dataset_size()
+    #is_supervised = attr_retrieval.is_supervise()
+    is_binary = attr_retrieval.is_binary()
+    ds_goal = attr_retrieval.det_goal()
 
-    process.process_data()
+    predict_df = [[is_binary, ds_goal, ds_size, 'null']]
 
-    return render_template('result.html')
+    result = process.process_data(predict_df)
+
+    print(result)
+
+    return render_template('result.html', value=result)
 
 
 if __name__ == '__main__':

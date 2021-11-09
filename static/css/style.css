@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgb(66, 128, 209);
+  /* background-image: url(static/images/dell.jpg); */
+}
+.overlay {
+  padding-top: 15px;
+}
+
+.big-image {
+  height: 125vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(https://wallpaperaccess.com/full/2454628.png);
+  opacity: 0.9;
+
+  /* @media only screen and (min-width: 400px) {
+    body {
+      background-image: url(https://wallpaperaccess.com/full/2454628.png);
+    }
+  } */
+}
+#ali {
+  margin-left: auto;
+}
+
+h2 {
+  font-family: "Public Sans", cursive;
+  color: white;
+  font-size: 300%;
+}
+h4 {
+  font-family: garamond;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  width: auto;
+  height: 50px;
+  background: #4e9caf;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-self: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  margin-top: 2cm;
+}
+
+.container_btn {
+  width: 100%;
+  text-align: center;
+}
+
+.value {
+  text-align: center;
+  font-family: garamond;
+  color: white;
+}
+
+.result-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 120px;
+}
