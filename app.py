@@ -54,15 +54,19 @@ def process():
     ds_size = attr_retrieval.dataset_size()
     #is_supervised = attr_retrieval.is_supervise()
     is_binary = attr_retrieval.is_binary()
+    print(is_binary)
     ds_goal = attr_retrieval.det_goal()
 
     predict_df = [[is_binary, ds_goal, ds_size, 'null']]
+
+    display_df = ["is binary: " + is_binary, "dataset goal: " +
+                  ds_goal, "dataset size: " + ds_size]
 
     result = process.process_data(predict_df)
 
     print(result)
 
-    return render_template('result.html', value=result)
+    return render_template('result.html', value=result, displayDf=display_df)
 
 
 if __name__ == '__main__':

@@ -64,7 +64,7 @@ def is_binary():
 
 
 def det_goal():
-    if (is_binary() == True):
+    if (is_binary() == 'TRUE'):
         goal = 'classification'
     else:
         goal = 'regression'
