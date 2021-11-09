@@ -1,0 +1,21 @@
+0,Regression,Small,Linear Regression
+1,Classification,Small,KNN Algorithm
+1,Classification,Big,Naïve Bayes Classifier
+1,Classification,Small,Logistic Regression
+1,Classification,Small,Support Vector Machine Algorithm
+1,Classification,Big,Random Forest Algorithm
+1,Classification,Big,Decision Tree
+No,Regression,Small,Linear Regression
+Yes,Classification,Small,KNN Algorithm
+Yes,Classification,Big,Naïve Bayes Classifier
+Yes,Classification,Small,Logistic Regression
+Yes,Classification,Small,Support Vector Machine Algorithm
+Yes,Classification,Big,Random Forest Algorithm
+Yes,Classification,Big,Decision Tree
+FALSE,Regression,Small,Linear Regression
+TRUE,Classification,Small,KNN Algorithm
+TRUE,Classification,Big,Naïve Bayes Classifier
+TRUE,Classification,Small,Logistic Regression
+TRUE,Classification,Small,Support Vector Machine Algorithm
+TRUE,Classification,Big,Random Forest Algorithm
+TRUE,Classification,Big,Decision Tree

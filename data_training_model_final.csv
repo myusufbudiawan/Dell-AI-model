@@ -1,0 +1,22 @@
+binary_type,data_type,row_col,model_type
+FALSE,Regression,Small,Linear Regression
+TRUE,Classification,Small,KNN Algorithm
+TRUE,Classification,Big,Naïve Bayes Classifier
+TRUE,Classification,Small,Logistic Regression
+TRUE,Classification,Small,Support Vector Machine Algorithm
+TRUE,Classification,Big,Random Forest Algorithm
+TRUE,Classification,Big,Decision Tree
+FALSE,Regression,Small,Linear Regression
+TRUE,Classification,Small,KNN Algorithm
+TRUE,Classification,Big,Naïve Bayes Classifier
+TRUE,Classification,Small,Logistic Regression
+TRUE,Classification,Small,Support Vector Machine Algorithm
+TRUE,Classification,Big,Random Forest Algorithm
+TRUE,Classification,Big,Decision Tree
+FALSE,Regression,Small,Linear Regression
+TRUE,Classification,Small,KNN Algorithm
+TRUE,Classification,Big,Naïve Bayes Classifier
+TRUE,Classification,Small,Logistic Regression
+TRUE,Classification,Small,Support Vector Machine Algorithm
+TRUE,Classification,Big,Random Forest Algorithm
+TRUE,Classification,Big,Decision Tree

@@ -1,0 +1,80 @@
+type_data,row_column,goal_id,model_id,binary_type
+4,67890,clustering,K-Means Clustering Algo,no
+2,879,pattern,Logistic Regression,yes
+1,789789,pattern,Decision Tree,no
+4,10001,clustering,K-Means Clustering Algo,no
+3,78900,predict,K-Means Clustering Algo,no
+3,56000,predict,K-Means Clustering Algo,no
+1,1000989,pattern,Decision Tree,no
+1,89000,pattern,Decision Tree,no
+4,12000,clustering,K-Means Clustering Algo,no
+3,78900,clustering,K-Means Clustering Algo,no
+1,234567,pattern,Decision Tree,no
+1,89789,pattern,Random Forest Algorithm,no
+2,56,pattern,linear regression,no
+1,678789,pattern,Decision Tree,no
+1,78099,pattern,Decision Tree,no
+4,89078,predict,K-Means Clustering Algo,no
+4,12345,clustering,K-Means Clustering Algo,no
+1,77,pattern,KNN Algorithm,yes
+1,8890,pattern,Support Vector Machine Algorithm,no
+1,234,pattern,KNN Algorithm,yes
+1,90899,pattern,Random Forest Algorithm,no
+3,78900,clustering,K-Means Clustering Algo,no
+1,95000,pattern,Random Forest Algorithm,no
+1,34500,pattern,Naive Bayes Classifier,yes
+2,9450,pattern,linear regression,no
+1,230,pattern,KNN Algorithm,yes
+1,345678,pattern,Decision Tree,no
+1,546,pattern,KNN Algorithm,yes
+1,23456,pattern,Decision Tree,no
+1,11000,pattern,Naive Bayes Classifier,yes
+4,44560,clustering,K-Means Clustering Algo,no
+3,54600,predict,K-Means Clustering Algo,no
+1,450,pattern,KNN Algorithm,yes
+1,13200,pattern,Naive Bayes Classifier,yes
+2,10,pattern,Logistic Regression,yes
+1,768905,pattern,Decision Tree,no
+2,124,pattern,Logistic Regression,yes
+1,456789,pattern,Decision Tree,no
+1,8600,pattern,KNN Algorithm,yes
+4,89000,predict,K-Means Clustering Algo,no
+2,33,pattern,linear regression,no
+1,54600,pattern,Random Forest Algorithm,no
+3,44500,clustering,K-Means Clustering Algo,no
+1,97890,pattern,Random Forest Algorithm,no
+4,12300,clustering,K-Means Clustering Algo,no
+3,58900,clustering,K-Means Clustering Algo,no
+3,12312,clustering,K-Means Clustering Algo,no
+2,999,pattern,Logistic Regression,yes
+1,10980,pattern,Naive Bayes Classifier,yes
+1,6780,pattern,Support Vector Machine Algorithm,no
+3,67890,clustering,K-Means Clustering Algo,no
+3,90876,clustering,K-Means Clustering Algo,no
+1,123456,pattern,Decision Tree,no
+1,65400,pattern,Decision Tree,no
+3,67800,predict,K-Means Clustering Algo,no
+1,77900,pattern,Random Forest Algorithm,no
+1,99999,pattern,Random Forest Algorithm,no
+1,67890,pattern,Random Forest Algorithm,no
+1,78906,pattern,Naive Bayes Classifier,yes
+3,34522,clustering,K-Means Clustering Algo,no
+2,123,pattern,Logistic Regression,yes
+1,7890,pattern,KNN Algorithm,yes
+1,34560,pattern,Decision Tree,no
+3,22345,clustering,K-Means Clustering Algo,no
+1,43211,pattern,Random Forest Algorithm,no
+1,9999,pattern,KNN Algorithm,yes
+1,45600,pattern,Decision Tree,no
+1,9800,pattern,Support Vector Machine Algorithm,no
+1,54678,pattern,Random Forest Algorithm,no
+2,3450,pattern,linear regression,no
+3,34700,clustering,K-Means Clustering Algo,no
+4,23450,clustering,K-Means Clustering Algo,no
+1,15600,pattern,Naive Bayes Classifier,yes
+2,1895,pattern,linear regression,no
+4,78900,predict,K-Means Clustering Algo,no
+1,54321,pattern,Decision Tree,no
+1,789678,pattern,Decision Tree,no
+4,45678,predict,K-Means Clustering Algo,no
+1,899200,pattern,Decision Tree,no

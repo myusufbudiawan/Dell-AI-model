@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Input dataset</title>
+    <link 
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+   
+
+    {{ dropzone.load_css() }} {{ dropzone.style('border: 3px dashed #000000;
+    margin: 10%; min-height: 400px;') }}
+    
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="login">ML model Recommender</a>
+        </div>
+      </div>
+    </nav>
+
+    <h2 align="center">Machine Learning Model Recommender</h3>
+    <h5 align="center">Choose your purpose of uploading the dataset</h2>
+       <div class="dropdown">
+      <!-- <button onclick="myFunction()" class="dropbtn">Dropdown</button> -->
+      <div id="myDropdown" div align="center"  class="dropdown-content">
+        <!-- <a href="#">For prediction</a>
+        <a href="#">For pattern</a> 
+        <a href="#">For pattern</a> -->
+       <label for="purpose">Purpose</label>
+    <select id="purpose" name="purpose">
+      <option value="pattern">Pattern</option>
+      <option value="predict">Predict</option>
+      <option value="clustering">Clustering</option>
+    </select>  </div>
+          </div>
+      </div>
+
+      <script>
+var select = document.getElementByID('purpose');
+var value = select.options[select.selectedIndex].value;
+$('#purpose').val();
+console.log(text);
+
+
+      </script>
+
+
+    {{ dropzone.create(action='upload') }} {{ dropzone.load_js() }} {{
+    dropzone.config() }} {# You can get the success response from server like
+    this: #} {#{ dropzone.config(custom_options="success: function(file,
+    response){console.log(response);}") }#}
+
+    
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+   
+    <div class="container">{% block content %} {% endblock %}</div>
+  </body>
+</html>
