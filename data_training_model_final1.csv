@@ -20,3 +20,4 @@ TRUE,Classification,Small,Logistic Regression
 TRUE,Classification,Small,Support Vector Machine Algorithm
 TRUE,Classification,Big,Random Forest Algorithm
 TRUE,Classification,Big,Decision Tree
+FALSE,Regression,Big,Random Forest Algorithm

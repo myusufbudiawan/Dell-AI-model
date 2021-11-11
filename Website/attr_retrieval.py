@@ -52,13 +52,8 @@ def is_binary():
     array = last_column.to_numpy()
 
     for i in array:
-        if i == 'yes' or i == 'no' or i == 'true' or i == 'false' or i == 1 or i == 0:
+        if i == 1 or i == 0:
             isBinary = 'TRUE'
-
-    # print(len(df.columns))
-    # print(df.columns.values)
-
-    # print(last_column.iloc[1]['binary_type'])
 
     return isBinary
 

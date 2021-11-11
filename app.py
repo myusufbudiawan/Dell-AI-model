@@ -3,7 +3,6 @@ import os
 from flask import Flask, render_template, request, jsonify
 from flask_dropzone import Dropzone
 from pandas.core.frame import DataFrame
-import requests
 import pandas as pd
 
 # variable declare
@@ -31,6 +30,7 @@ dropzone = Dropzone(app)
 
 @app.route('/', methods=['POST', 'GET'])
 def upload():
+    # Drag and Drop feature
     if request.method == 'POST':
         f = request.files.get('file')
         file_path = os.path.join(app.config['UPLOADED_PATH'], f.filename)

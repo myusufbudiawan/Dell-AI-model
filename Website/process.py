@@ -22,31 +22,22 @@ import pandas as pd
 
 # Decision tree model
 
-header = ["binary_type", "data_type", "ds_size", "is_supervised"]
+header = ["binary_type", "data_type", "ds_size"]
 
 
 def process_data(predict_df):
 
     outcome_string = ""
 
+    # Training data
     data = pd.read_csv('data_training_model_final1.csv', encoding='latin-1')
 
     data_array = data.to_numpy()
 
-    # data.to('input.dict')
-
-    # data_input = pd.read_csv('input.csv')
-
-    # data = [
-    #     [4, 'clustering', 'K-Means Clustering Algo'],
-    #     [2, 'predict', 'Logistic Regression'],
-    #     [1, 'pattern', 'Decision Tree'],
-    #     [4, 'clustering', 'Decision Tree'],
-    #     [4, 'pattern', 'K-Means Clustering Algo'],
-    #     [3, 'clustering', 'Decision Tree'],
-    # ]
-
     my_tree = build_tree(data_array)
+
+    # visualize the tree
+    print_tree(my_tree)
 
     testing_data = [
         ['TRUE', 'Classification', 'Small', 'null']
@@ -57,21 +48,9 @@ def process_data(predict_df):
     print("attributes of the data set are:", predict_df)
 
     for row in predict_df:
-        # print("Actual: %s. Predicted: %s" % (
-        #     row[-1], print_leaf(classify(row, my_tree)))
-        # )
         outcome_string = "%s" % (print_leaf(classify(row, my_tree)))
 
     return outcome_string
-
-# TODO
-# print leaf--expected outcome of the model
-    # print(unique_vals(data, 2))
-    # print(data.to_string(index=False))
-
-    # print(data)
-
-    #print(unique_vals(data, 1))
 
 
 def unique_vals(rows, col):
@@ -172,16 +151,10 @@ def find_best_split(rows):
 
 
 def build_tree(rows):
-    """Builds the tree.
-
-    Rules of recursion: 1) Believe that it works. 2) Start by checking
-    for the base case (no further information gain). 3) Prepare for
-    giant stack traces.
-    """
-
     # Try partitioing the dataset on each of the unique attribute,
     # calculate the information gain,
     # and return the question that produces the highest gain.
+
     gain, question = find_best_split(rows)
 
     # Base case: no further info gain
@@ -202,8 +175,8 @@ def build_tree(rows):
 
     # Return a Question node.
     # This records the best feature / value to ask at this point,
-    # as well as the branches to follow
-    # dependingo on the answer.
+    # and the branches to follow
+    # depends on the answer.
     return Decision_Node(question, true_branch, false_branch)
 
 
